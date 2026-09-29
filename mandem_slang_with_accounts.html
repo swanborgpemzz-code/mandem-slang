@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MANDEM SLANG — premium streetwear. Built from the streets, made for the culture.">
+  <title>MANDEM SLANG | Streetwear</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+.header-actions{display:flex;gap:10px}.account-btn{border:1px solid #444;background:transparent;color:#fff;padding:11px 16px;text-transform:uppercase;font-size:12px;letter-spacing:1px}.account-btn:hover{background:#fff;color:#000}.account-panel{position:fixed;z-index:30;top:0;right:0;width:min(430px,100%);height:100vh;background:#111;padding:28px;transform:translateX(105%);transition:.3s;overflow:auto;box-shadow:-20px 0 60px #0008}.account-panel.open{transform:translateX(0)}.account-head{display:flex;justify-content:space-between;border-bottom:1px solid #292929;padding-bottom:18px;margin-bottom:24px}.account-head h3{margin:0;letter-spacing:2px}.account-head button{border:0;background:none;color:#fff;font-size:30px}.auth-tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #333;margin-bottom:24px}.auth-tab{background:none;color:#888;border:0;padding:14px;font-size:12px;letter-spacing:1.5px}.auth-tab.active{color:#fff;border-bottom:2px solid #fff}.auth-form{display:grid;gap:13px}.auth-form input{background:#181818;color:#fff;border:1px solid #383838;padding:15px}.auth-form p{color:#aaa}.hidden{display:none!important}.profile-view{text-align:center}.profile-badge{width:76px;height:76px;border:1px solid #555;border-radius:50%;display:grid;place-items:center;margin:10px auto 22px;font-size:28px}.profile-view h3{font-size:25px}.profile-email{color:#999}.account-card{border:1px solid #333;padding:18px;text-align:left;margin:20px 0}.account-card span{display:block;color:#777;font-size:10px;letter-spacing:1.5px;margin-bottom:7px}.account-card strong{font-size:13px}@media(max-width:700px){.nav{display:none}.account-btn{padding:9px 10px}}</style></head>
+<body>
+  <div class="announcement">MANDEM SLANG — BUILT FROM THE STREETS. MADE FOR THE CULTURE.</div>
+
+  <header class="header">
+    <a class="logo" href="#home" aria-label="Mandem Slang home">MANDEM<span>SLANG</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><button class="account-btn" id="accountBtn">Account</button><button class="cart-btn" id="cartBtn">Bag <span id="cartCount">0</span></button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">TMG STREETWEAR • BOTSWANA</p>
+        <h1>MOVE<br><span>DIFFERENT.</span></h1>
+        <p class="hero-copy">Streetwear with identity. Clean silhouettes, bold energy and a culture-first attitude.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#shop">Shop the drop</a>
+          <a class="btn btn-outline" href="#story">Explore the brand</a>
+        </div>
+      </div>
+      <div class="hero-mark">MS</div>
+    </section>
+
+    <section class="ticker" aria-label="Brand message">
+      <div>MANDEM SLANG • ORIGINAL ENERGY • TMG • BOTSWANA • MANDEM SLANG • ORIGINAL ENERGY • TMG • BOTSWANA •</div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">THE FIRST DROP</p>
+          <h2>SHOP THE COLLECTION</h2>
+        </div>
+        <button class="filter active" data-filter="all">All</button>
+      </div>
+      <div class="filters">
+        <button class="filter" data-filter="tees">Tees</button>
+        <button class="filter" data-filter="hoodies">Hoodies</button>
+        <button class="filter" data-filter="bottoms">Bottoms</button>
+        <button class="filter" data-filter="accessories">Accessories</button>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="story-image"><span>MS</span></div>
+      <div class="story-copy">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>MORE THAN A LABEL.</h2>
+        <p>MANDEM SLANG is a streetwear concept built around confidence, individuality and everyday city culture. The brand mixes a bold visual identity with wearable pieces designed to feel at home on the street.</p>
+        <p>Born in TMG, Botswana, MANDEM SLANG is about creating your own lane — no copying, no pretending, just your style.</p>
+        <a class="text-link" href="#contact">Join the movement →</a>
+      </div>
+    </section>
+
+    <section class="lookbook section" id="lookbook">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">VISUAL JOURNAL</p>
+          <h2>THE LOOKBOOK</h2>
+        </div>
+      </div>
+      <div class="look-grid">
+        <div class="look-card tall"><span>01 / STREET</span></div>
+        <div class="look-card"><span>02 / AFTER DARK</span></div>
+        <div class="look-card"><span>03 / EVERYDAY</span></div>
+        <div class="look-card wide"><span>04 / TMG</span></div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">STAY IN THE LOOP</p>
+      <h2>DON'T MISS THE NEXT DROP.</h2>
+      <form id="newsletterForm">
+        <input type="email" id="email" placeholder="Your email address" required>
+        <button class="btn btn-light" type="submit">Subscribe</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div>
+        <p class="eyebrow">CONTACT</p>
+        <h2>LET'S CONNECT.</h2>
+        <p>For collaborations, wholesale enquiries or general questions, send us a message.</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input required placeholder="Name">
+        <input type="email" required placeholder="Email">
+        <textarea required rows="5" placeholder="Message"></textarea>
+        <button class="btn btn-dark" type="submit">Send message</button>
+        <p id="contactMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="logo">MANDEM<span>SLANG</span></div>
+    <p>© <span id="year"></span> MANDEM SLANG. All rights reserved.</p>
+    <div class="socials"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
+  </footer>
+
+
+  <aside class="account-panel" id="accountPanel" aria-hidden="true"><div class="account-head"><h3>ACCOUNT</h3><button id="closeAccount">×</button></div><div id="authView"><div class="auth-tabs"><button class="auth-tab active" data-auth="login">LOGIN</button><button class="auth-tab" data-auth="signup">SIGN UP</button></div><form id="loginForm" class="auth-form"><p>Welcome back to MANDEM SLANG.</p><input id="loginEmail" type="email" placeholder="Email address" required><input id="loginPassword" type="password" placeholder="Password" required><button class="btn btn-dark" type="submit">LOGIN</button><p id="loginMessage" class="form-message"></p></form><form id="signupForm" class="auth-form hidden"><p>Create your MANDEM SLANG account.</p><input id="signupName" type="text" placeholder="Full name" required><input id="signupEmail" type="email" placeholder="Email address" required><input id="signupPassword" type="password" placeholder="Password (8+ characters)" minlength="8" required><input id="signupConfirm" type="password" placeholder="Confirm password" minlength="8" required><button class="btn btn-dark" type="submit">CREATE ACCOUNT</button><p id="signupMessage" class="form-message"></p></form></div><div id="profileView" class="profile-view hidden"><div class="profile-badge" id="profileInitial">M</div><p class="eyebrow">MEMBER ACCOUNT</p><h3 id="profileName"></h3><p id="profileEmail" class="profile-email"></p><div class="account-card"><span>MEMBERSHIP</span><strong>MANDEM SLANG COMMUNITY</strong></div><button class="btn btn-dark" id="logoutBtn">LOG OUT</button></div></aside>
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-head"><h3>YOUR BAG</h3><button id="closeCart">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom">
+      <div><span>Subtotal</span><strong id="cartTotal">P0.00</strong></div>
+      <button class="btn btn-dark" id="checkoutBtn">Checkout</button>
+      <small>Demo checkout — connect a payment provider before taking live orders.</small>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+<script>const ab=document.getElementById('accountBtn'),ap=document.getElementById('accountPanel'),ov=document.getElementById('overlay');const users=()=>JSON.parse(localStorage.getItem('mandemSlangUsers')||'[]');const save=u=>localStorage.setItem('mandemSlangUsers',JSON.stringify(u));const current=()=>JSON.parse(localStorage.getItem('mandemSlangCurrentUser')||'null');function render(){let u=current(),auth=document.getElementById('authView'),profile=document.getElementById('profileView');if(u){auth.classList.add('hidden');profile.classList.remove('hidden');profileName.textContent=u.name.toUpperCase();profileEmail.textContent=u.email;profileInitial.textContent=u.name.charAt(0).toUpperCase();ab.textContent='MY ACCOUNT'}else{auth.classList.remove('hidden');profile.classList.add('hidden');ab.textContent='ACCOUNT'}}function openA(){ap.classList.add('open');ov.classList.add('active');render()}function closeA(){ap.classList.remove('open');ov.classList.remove('active')}ab.onclick=openA;closeAccount.onclick=closeA;ov.onclick=closeA;document.querySelectorAll('.auth-tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.auth-tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');let l=t.dataset.auth==='login';loginForm.classList.toggle('hidden',!l);signupForm.classList.toggle('hidden',l)});loginForm.onsubmit=e=>{e.preventDefault();let u=users().find(x=>x.email===loginEmail.value.trim().toLowerCase()&&x.password===loginPassword.value);if(!u){loginMessage.textContent='Incorrect email or password.';return}localStorage.setItem('mandemSlangCurrentUser',JSON.stringify(u));render()};signupForm.onsubmit=e=>{e.preventDefault();if(signupPassword.value!==signupConfirm.value){signupMessage.textContent='Passwords do not match.';return}let us=users(),email=signupEmail.value.trim().toLowerCase();if(us.some(x=>x.email===email)){signupMessage.textContent='An account with this email already exists.';return}let u={name:signupName.value.trim(),email,password:signupPassword.value};us.push(u);save(us);localStorage.setItem('mandemSlangCurrentUser',JSON.stringify(u));render()};logoutBtn.onclick=()=>{localStorage.removeItem('mandemSlangCurrentUser');render()};render();</script></body>
+</html>
